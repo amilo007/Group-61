@@ -1,0 +1,23 @@
+{
+  "name": "workout-tracker",
+  "version": "1.0.0",
+  "description": "A full-stack workout tracker application.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seeders/seed.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "GYM TRAINER",
+  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^4.2.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.1",
+    "workout-tracker": "file:"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}

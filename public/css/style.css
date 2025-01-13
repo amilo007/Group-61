@@ -1,0 +1,248 @@
+/* GENERAL STYLES */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+.wrapper {
+    /* background-color: #f8f6f6; */
+    font-family: 'Lexend', sans-serif;
+    height: 100%;
+}
+
+.wrapper {
+    background-color: #f8f6f6;
+    position: relative;
+    z-index: 5;
+    /* padding-bottom: 100px; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lexend', sans-serif;
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: 400;
+}
+  
+.card.m-auto,
+.m-auto {
+    margin: 0 auto;
+    width: 500px;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.col {
+    flex: 1;
+}
+
+.ui.card h2 {
+    padding: 10px;
+}
+
+/* NAVBAR */
+nav {
+    background-color: white;
+    position: relative;
+    z-index: 10;
+    height: 100px;
+    padding: 10px;
+    line-height: 3;
+    font-size: 15px;
+    box-shadow: -3px -8px 14px 1px grey;
+}
+
+.nav-title {
+    float: left;
+    width: fit-content;
+}
+
+.nav-links {
+    float: right;
+    padding-top: 30px;
+    margin-right: 20px;
+    text-align: right;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a {
+    margin: 0 10px;
+}
+
+.nav-links a:hover{
+    opacity: 0.5;
+}
+
+#fitness-tracker-link {
+    font-weight: 600;
+    border-bottom: solid 3px black;
+}
+
+/* HEADER */
+header {
+    height: 120px;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+header h1 {
+    transform: skewX(-2deg);
+}
+
+/* BUTTONS */
+.buttons .ui.button:first-child {
+    border-radius: 8px;
+}
+
+.buttons .ui.button:nth-child(2) {
+    border-radius: 8px;
+}
+
+button {
+    display: block;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    padding: 10px;
+    background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+}
+
+/* FORMS */
+form label {
+    width: 150px;
+    margin-top: 0.7rem;
+}
+
+form::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+form label {
+    width: 150px;
+    margin-top: 0.7rem;
+}
+
+form > button {
+    float: right;
+    margin: 5px;
+    margin-top: 20px;
+}
+
+.btn,
+button {
+    display: block;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    padding: 10px;
+    background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+}
+
+/* FOOTER */
+footer {
+    height: fit-content;
+    width: 100%;
+    background-color: #f8f6f6;
+}
+
+#footer-link {
+    width: fit-content;
+    margin: 0 auto;
+    color: grey;
+    padding-bottom: 15px;
+    font-size: 15px;
+}
+
+/* SUCCESS MESSAGE */
+#toast {
+    border-radius: 4px;
+    border: solid 1px hsl(94, 90%, 16%);
+    font-size: 15px;
+    line-height: 19.5px;
+    margin: 0px 0px 16px;
+    padding: 30px 59.5px 12px 20px;
+    text-align: left;
+    width: 310px;
+    min-height: 80px;
+    position: fixed;
+    top: 120px;
+    right: -320px;
+    opacity: 1;
+    transition: all 0.5s;
+    z-index: 15;
+}
+  
+#toast.success {
+    opacity: 1;
+    right: 10px;
+    background-color: hsl(94, 40%, 86%);
+    color: hsl(94, 90%, 16%);
+    /* transition: all 1.2s; */
+    animation-name: toast;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+    /* animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86); */
+}
+
+@keyframes toast {
+    50% {
+        opacity: 1;
+        right: 10px;
+    }
+    100% {
+        opacity: 0;
+        right: -320px;
+    }
+}
+
+/* ------- MEDIA QUERIES ------- */
+@media (max-width: 675px) {
+    nav {
+        height: 170px;
+    }
+
+    .nav-title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links {
+        width: fit-content;
+        padding-top: 0;
+        float: none;
+        margin: 0 auto;
+    }
+}

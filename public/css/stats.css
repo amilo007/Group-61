@@ -1,0 +1,83 @@
+.stats-wrapper {
+    min-height: 100%;
+    padding-bottom: 50px;
+    background-color: #f8f6f6;
+}
+
+.stats-wrapper header {
+    padding-top: 30px;
+    background: rgb(40, 128, 211);
+    background: linear-gradient(161deg, rgba(96,141,238,1) 0%, rgba(77,150,231,1) 26%, rgba(75,166,255,1) 56%, rgba(198,250,255,1) 100%);
+    color: white;
+    margin: 15px;
+    border-radius: 15px;
+}
+
+.stats-wrapper h1 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.stats-wrapper #dashboard-span {
+    font-weight: 600;
+}
+
+.stats-wrapper .container {
+    margin: 50px auto;
+}
+
+.stats-wrapper h3 {
+    font-size: 24px;
+}
+
+.stats-wrapper p {
+    font-weight: 300;
+}
+
+.stats-wrapper .row {
+    margin-bottom: 75px;
+}
+
+/* CHARTS */
+#duration-line, #duration-pie, #weight-bar, #weight-doughnut {
+    border-radius: 8px;
+    background: white;
+    height: 300px;
+    padding: 10px;
+    box-shadow: 1px 2px 3px 0 rgb(218, 218, 218);
+}
+
+/* ------- MEDIA QUERIES ------- */
+@media (max-width: 768px) {
+    #duration-pie, #weight-doughnut {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 675px) {
+    .nav-title {
+        height: 101px;
+    }
+
+    .nav-links {
+        height: 146px;
+    }
+
+    .stats-wrapper header {
+        height: 100px;
+    }
+
+    .stats-wrapper .container {
+        margin: 25px auto;
+    }
+
+    .stats-wrapper .row {
+        margin-bottom: 35px;
+    }
+    
+    .stats-wrapper h1 {
+        font-size: 30px;
+        margin-top: 0;
+    }
+}
